@@ -1,7 +1,8 @@
 import React from "react";
 import { Button } from "@/components/ui/button";
-import { RoughNotation } from "react-rough-notation";
 import Link from "next/link";
+import CTAComponentClient from "./CTAComponentClient";
+
 function CTAComponent() {
   return (
     <section
@@ -10,15 +11,7 @@ function CTAComponent() {
     >
       <div className="container flex flex-col gap-12 items-center justify-center">
         <h2 className="text-2xl sm:text-3xl font-bold tracking-tighter md:text-5xl text-slate-200">
-          <RoughNotation
-            type="highlight"
-            show={true}
-            color="#10b981"
-            animationDuration={800}
-          >
-            Let&apos;s build
-          </RoughNotation>{" "}
-          a website or app 👨🏻‍💻
+          <CTAComponentClient /> a website or app 👨🏻‍💻
         </h2>
         <p className="mx-auto max-w-[700px] text-slate-400 md:text-xl">
           Feel free to book a call with me to discuss your project or ideas
