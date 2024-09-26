@@ -2,7 +2,7 @@ import React from "react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
-function HeroContent({ children }) {
+function HeroContent({ children }: { children: React.ReactNode }) {
   return (
     <section className="w-full flex items-center justify-center md:min-h-[calc(100vh-22rem)]">
       <div className="container px-4 md:px-6 py-12 md:py-24">

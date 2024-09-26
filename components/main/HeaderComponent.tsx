@@ -31,12 +31,6 @@ function HeaderComponent() {
         >
           Projects
         </Link>
-        {/* <Link
-          className="text-sm font-medium text-slate-400 hover:text-emerald-300 hover:underline underline-offset-4"
-          href="#skills"
-        >
-          Skills
-        </Link> */}
         <Link
           className="text-sm font-medium text-slate-400 hover:text-emerald-300 hover:underline underline-offset-4"
           href="#contact"
