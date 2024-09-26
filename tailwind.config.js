@@ -130,7 +130,7 @@ module.exports = {
       },
     },
   },
-  plugins: [require("tailwindcss-animate"), require("daisyui")],
+  plugins: [require("tailwindcss-animate")],
   daisyui: {
     // Light & dark themes are added by default (it switches automatically based on OS settings)
     // You can add another theme among the list of 30+
