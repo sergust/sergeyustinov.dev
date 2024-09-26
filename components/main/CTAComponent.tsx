@@ -1,7 +1,8 @@
 import React from "react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import CTAComponentClient from "./CTAComponentClient";
+// import CTAComponentClient from "./CTAComponentClient";
+import HighlightedText from "../ui/HighlightedText";
 
 function CTAComponent() {
   return (
@@ -11,7 +12,7 @@ function CTAComponent() {
     >
       <div className="container flex flex-col gap-12 items-center justify-center">
         <h2 className="text-2xl sm:text-3xl font-bold tracking-tighter md:text-5xl text-slate-200">
-          <CTAComponentClient /> a website or app 👨🏻‍💻
+          <HighlightedText text="Let's build" /> a website or app 👨🏻‍💻
         </h2>
         <p className="mx-auto max-w-[700px] text-slate-400 md:text-xl">
           Feel free to book a call with me to discuss your project or ideas
