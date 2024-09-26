@@ -4,6 +4,8 @@ import HeroComponent from "@/components/main/HeroComponent";
 import ProjectsComponent from "@/components/main/ProjectsComponent";
 import SkillsComponent from "@/components/main/SkillsComponent";
 import CTAComponent from "@/components/main/CTAComponent";
+import Testimonial1Small from "@/components/Testimonial1Small";
+import Testimonials3 from "@/components/Testimonials3";
 
 export default function Page() {
   return (
@@ -14,6 +16,8 @@ export default function Page() {
           <main className="flex-1">
             <HeroComponent />
             <ProjectsComponent />
+            {/* <Testimonial1Small /> */}
+            <Testimonials3 />
             <SkillsComponent />
             <CTAComponent />
           </main>

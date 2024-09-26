@@ -9,6 +9,8 @@ const nextConfig = {
       "images.unsplash.com",
       "logos-world.net",
       "avatars.githubusercontent.com",
+      "media.licdn.com",
+      "x.com",
     ],
   },
 };

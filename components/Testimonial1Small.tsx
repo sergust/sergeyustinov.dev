@@ -25,15 +25,14 @@ const Testimonial1Small = () => {
         </div>
         <div className="text-base leading-relaxed space-y-2 max-w-md mx-auto text-center">
           <p>
-            <span className="bg-warning/25 px-1.5">
-              I don&apos;t want to pay Stripe $2 for every invoice.
-            </span>{" "}
-            I don&apos;t want to spend 10 minutes manually crafting every
-            invoice either.
+            What was supposed to be a short-term project became a 1+ year stint
+            at Jibble for Sergey where he made some great contributions to
+            building our new product, he communicates well and brings a a lot of
+            enthusiasm.
           </p>
           <p>
-            Zenvoice solved this problem once and for all. The app is simple,
-            but it nails the job perfectly.
+            He also works hard and has made some great strides in his work while
+            with us. We wish him all the best in his next project!
           </p>
         </div>
         <div className="flex justify-center items-center gap-3 md:gap-4">
