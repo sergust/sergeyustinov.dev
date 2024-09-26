@@ -1,7 +1,6 @@
 "use client";
 import React from "react";
 import Image from "next/image";
-import { RoughNotation, RoughNotationGroup } from "react-rough-notation";
 import { motion, useInView } from "framer-motion";
 import Link from "next/link";
 
@@ -90,7 +89,11 @@ const ProjectsShowcase = () => {
               project.width
             }] h-[${project.height}]`}
           >
-            <ProjectCard {...project} />
+            <ProjectCard
+              {...project}
+              width={parseInt(project.width)}
+              height={parseInt(project.height)}
+            />
           </div>
         ))}
       </div>

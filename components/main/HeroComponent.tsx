@@ -1,6 +1,7 @@
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { RoughNotation } from "react-rough-notation";
+import Link from "next/link";
 
 function HeroComponent() {
   return (
@@ -31,10 +32,13 @@ function HeroComponent() {
           </div>
           <div className="mt-8">
             <Button
+              asChild
               className="bg-emerald-300 text-slate-900 hover:bg-emerald-400"
               size="lg"
             >
-              Book a call <span className="ml-2">📞</span>
+              <Link href="https://cal.com/sergustinov/15-minutes-chat">
+                Book a call <span className="ml-2">📞</span>
+              </Link>
             </Button>
           </div>
         </div>

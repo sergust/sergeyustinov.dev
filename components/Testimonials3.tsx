@@ -95,7 +95,7 @@ const Testimonials3 = () => {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-20">
           <h2 className="text-4xl sm:text-5xl font-extrabold text-base-content mb-8">
-            People I&apos;ve worked with
+            People I&apos;ve worked with ✌️
           </h2>
           <p className="text-base text-base-content/80 max-w-2xl mx-auto">
             Don&apos;t take my word for it. Here&apos;s what they have to say

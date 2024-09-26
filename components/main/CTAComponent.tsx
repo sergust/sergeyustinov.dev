@@ -1,10 +1,11 @@
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { RoughNotation } from "react-rough-notation";
+import Link from "next/link";
 function CTAComponent() {
   return (
     <section
-      className="w-full py-12 md:py-24 lg:py-32 bg-slate-900"
+      className="w-full py-12 md:py-24 lg:py-32 bg-slate-900 flex justify-center items-center"
       id="contact"
     >
       <div className="container flex flex-col gap-12 items-center justify-center">
@@ -25,11 +26,13 @@ function CTAComponent() {
 
         <div className="flex flex-col gap-4 items-center">
           <Button
-            type="submit"
+            asChild
             className="bg-emerald-300 text-slate-900 hover:bg-emerald-400"
             size="lg"
           >
-            Book a call <span className="ml-2">📞</span>
+            <Link href="https://cal.com/sergustinov/15-minutes-chat">
+              Book a call <span className="ml-2">📞</span>
+            </Link>
           </Button>
 
           <div className="inline-flex w-fit gap-4 items-center justify-center rounded-full bg-emerald-300 bg-opacity-20 px-2.5 py-0.5 text-sm font-light text-emerald-300">
