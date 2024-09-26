@@ -6,6 +6,7 @@ import SkillsComponent from "@/components/main/SkillsComponent";
 import CTAComponent from "@/components/main/CTAComponent";
 import Testimonial1Small from "@/components/Testimonial1Small";
 import Testimonials3 from "@/components/Testimonials3";
+import CTA from "@/components/CTA";
 
 export default function Page() {
   return (
@@ -18,7 +19,7 @@ export default function Page() {
             <ProjectsComponent />
             {/* <Testimonial1Small /> */}
             <Testimonials3 />
-            <SkillsComponent />
+            {/* <SkillsComponent /> */}
             <CTAComponent />
           </main>
           <footer className="flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t border-slate-800">

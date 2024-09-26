@@ -30,8 +30,11 @@ function HeroComponent() {
             </p>
           </div>
           <div className="mt-8">
-            <Button className="bg-emerald-300 text-slate-900 hover:bg-emerald-400">
-              Book a call
+            <Button
+              className="bg-emerald-300 text-slate-900 hover:bg-emerald-400"
+              size="lg"
+            >
+              Book a call <span className="ml-2">📞</span>
             </Button>
           </div>
         </div>
