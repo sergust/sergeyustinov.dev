@@ -1,6 +1,7 @@
 import React from "react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import TestimonialsAvatars from "../TestimonialsAvatars";
 
 function HeroContent({ children }: { children: React.ReactNode }) {
   return (
@@ -8,7 +9,7 @@ function HeroContent({ children }: { children: React.ReactNode }) {
       <div className="container px-4 md:px-6 py-12 md:py-24">
         <div className="flex flex-col items-center justify-center space-y-4 text-center">
           <div className="space-y-2 flex flex-col gap-12 items-center">
-            <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none text-slate-200 leading-relaxed">
+            <h1 className="text-3xl font-extrabold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none text-slate-200 leading-relaxed">
               👋 Hi, I&apos;m Sergey <br className="hidden sm:inline" />
               <span className="block my-2">a Front End Developer</span>
               <span className="block">{children}</span>

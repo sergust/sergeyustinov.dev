@@ -2,11 +2,11 @@ import Link from "next/link";
 import HeaderComponent from "@/components/main/HeaderComponent";
 import HeroComponent from "@/components/main/HeroComponent";
 import ProjectsComponent from "@/components/main/ProjectsComponent";
-import SkillsComponent from "@/components/main/SkillsComponent";
+// import SkillsComponent from "@/components/main/SkillsComponent";
 import CTAComponent from "@/components/main/CTAComponent";
-import Testimonial1Small from "@/components/Testimonial1Small";
+// import Testimonial1Small from "@/components/Testimonial1Small";
 import Testimonials3 from "@/components/Testimonials3";
-import CTA from "@/components/CTA";
+// import CTA from "@/components/CTA";
 import PlausibleProvider from "next-plausible";
 
 export default function Page() {
