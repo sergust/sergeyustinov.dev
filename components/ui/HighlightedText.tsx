@@ -31,13 +31,15 @@ const HighlightedText: React.FC<HighlightedTextProps> = ({
       { threshold: 0.1 }
     );
 
-    if (notationRef.current) {
-      observer.observe(notationRef.current);
+    const notationRefCurrent = notationRef.current;
+
+    if (notationRefCurrent) {
+      observer.observe(notationRefCurrent);
     }
 
     return () => {
-      if (notationRef.current) {
-        observer.unobserve(notationRef.current);
+      if (notationRefCurrent) {
+        observer.unobserve(notationRefCurrent);
       }
       observer.disconnect();
     };
