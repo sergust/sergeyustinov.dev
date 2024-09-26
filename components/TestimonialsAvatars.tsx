@@ -5,7 +5,7 @@ import { Star } from "lucide-react";
 const avatars = [
   {
     alt: "User",
-    src: "/api/placeholder/50/50",
+    src: "https://avatars.githubusercontent.com/u/3471265?v=4",
   },
   {
     alt: "User",

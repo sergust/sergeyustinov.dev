@@ -85,9 +85,9 @@ const ProjectsShowcase = () => {
         {projects.map((project, index) => (
           <div
             key={project.src}
-            className={`${index === 1 ? "md:-mt-64" : "md:mt-0"} w-[${
+            className={`${index === 1 ? "md:mb-32" : "md:mt-0"} w-[${
               project.width
-            }] h-[${project.height}]`}
+            }] h-fit`}
           >
             <ProjectCard
               {...project}

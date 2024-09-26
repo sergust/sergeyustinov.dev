@@ -8,6 +8,7 @@ import CTAComponent from "@/components/main/CTAComponent";
 import Testimonials3 from "@/components/Testimonials3";
 // import CTA from "@/components/CTA";
 import PlausibleProvider from "next-plausible";
+import Hero from "@/components/Hero";
 
 export default function Page() {
   return (
