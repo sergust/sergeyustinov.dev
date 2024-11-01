@@ -80,7 +80,7 @@ export default function MobileMenu() {
 
           <div className="pt-4 mt-4 border-t border-gray-100">
             <p className="text-sm text-gray-500 text-center">
-              Let's build something amazing together
+              Let&apos;s build something amazing together
             </p>
           </div>
         </div>
