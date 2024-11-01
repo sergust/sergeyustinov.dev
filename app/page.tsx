@@ -63,9 +63,9 @@ const HeaderComponent: React.FC = () => {
         >
           <Button
             variant="outline"
-            className="border-blue-700 text-blue-700 hover:bg-blue-50 bg-white"
+            className="border-indigo-600 text-indigo-600 hover:bg-indigo-600 bg-white"
           >
-            Book a Call
+            Book a Call 📞
           </Button>
         </Link>
       </nav>
@@ -340,7 +340,7 @@ function Page() {
               <Button
                 size="lg"
                 variant="outline"
-                className="bg-white text-blue-800 hover:bg-blue-50 transition-colors"
+                className="bg-white text-blue-800 hover:text-blue-800 hover:bg-blue-100 transition-colors"
               >
                 Book Your Free Strategy Call
               </Button>

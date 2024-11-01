@@ -70,10 +70,10 @@ export default function MobileMenu() {
             >
               <Button
                 variant="outline"
-                className="w-full border-emerald-300 text-emerald-300 hover:bg-emerald-300/20"
+                className="w-full border-indigo-600 text-indigo-600 hover:bg-indigo-600 bg-white"
                 onClick={() => setIsOpen(false)}
               >
-                Book a Call
+                Book a Call 📞
               </Button>
             </Link>
           </div>
