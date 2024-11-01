@@ -12,13 +12,13 @@ function CTAComponent() {
     >
       <div className="container flex flex-col gap-12 items-center justify-center">
         <h2 className="text-2xl sm:text-3xl font-bold tracking-tighter md:text-5xl text-slate-200">
-          <HighlightedText text="Let's build" /> a website or app 👨🏻‍💻
+          You are <HighlightedText text="amazing" />
         </h2>
-        <p className="mx-auto max-w-[700px] text-slate-400 md:text-xl">
+        {/* <p className="mx-auto max-w-[700px] text-slate-400 md:text-xl">
           Feel free to book a call with me to discuss your project or ideas
-        </p>
+        </p> */}
 
-        <div className="flex flex-col gap-4 items-center">
+        {/* <div className="flex flex-col gap-4 items-center">
           <Button
             asChild
             className="bg-emerald-300 text-slate-900 hover:bg-emerald-400"
@@ -36,7 +36,7 @@ function CTAComponent() {
               <span className="relative inline-flex rounded-full h-3 w-3 bg-emerald-300"></span>
             </span>
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );

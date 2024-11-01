@@ -39,3 +39,9 @@ function HeroContent() {
 }
 
 export default HeroContent;
+
+<h1 className="text-3xl">
+  👋 Hi, I am Sergey <br className="hidden sm:inline" />
+  <span className="block my-2">a Front End Developer </span>
+  for <HighlightedText text="startups" type="underline" />
+</h1>;
