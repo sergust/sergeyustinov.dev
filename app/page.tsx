@@ -28,11 +28,18 @@ function Page() {
       <main className="flex-grow">
         <AnimatedHero />
 
-        <section className="py-16 px-4" id="our-work">
-          <div className="container mx-auto">
-            <h2 className="text-2xl md:text-3xl font-bold text-center mb-12 text-gray-800">
-              Why Founders Choose to Work With Me
-            </h2>
+        <section className="py-24 px-4 bg-gradient-to-br from-slate-50 via-white to-blue-50 relative overflow-hidden">
+          <div className="container mx-auto relative">
+            <div className="max-w-3xl mx-auto text-center mb-16 opacity-0 translate-y-6 animate-[fade-in-up_0.6s_ease-out_forwards]">
+              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                Why Founders Choose to Work With Me
+              </h2>
+              <p className="text-lg text-gray-600">
+                Delivering exceptional value through expertise, efficiency, and
+                dedication to your success
+              </p>
+            </div>
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
@@ -40,62 +47,103 @@ function Page() {
                   title: "2-Week Delivery",
                   description:
                     "Get your MVP launched while your competition is still planning. No endless meetings or bureaucracy.",
+                  delay: "delay-[0ms]",
                 },
                 {
                   icon: FileText,
                   title: "Full-Stack Solution",
                   description:
                     "From backend architecture to conversion-optimized landing pages - everything you need to start selling.",
+                  delay: "delay-[100ms]",
                 },
                 {
                   icon: Code,
                   title: "Future-Proof Tech",
                   description:
                     "Built with Next.js, React, and other modern tools that scale. No technical debt to slow you down later.",
+                  delay: "delay-[200ms]",
                 },
                 {
                   icon: Users,
                   title: "Direct Communication",
                   description:
                     "Work directly with me - no account managers or junior developers. Clear, fast communication at every step.",
+                  delay: "delay-[300ms]",
                 },
                 {
                   icon: Search,
                   title: "Launch-Ready Package",
                   description:
                     "SEO optimization, analytics, and performance tuning included. Ready to attract customers from day one.",
+                  delay: "delay-[400ms]",
                 },
                 {
                   icon: GitBranch,
                   title: "Clean, Maintainable Code",
                   description:
                     "Enterprise-grade code quality with comprehensive documentation. Easy handover to your future tech team.",
+                  delay: "delay-[500ms]",
                 },
               ].map((feature, index) => (
-                <Card
+                <div
                   key={index}
-                  className="border-none shadow-lg hover:shadow-xl transition-shadow bg-white hover:bg-slate-50"
+                  className={`opacity-0 translate-y-8 animate-[fade-in-up_0.5s_ease-out_forwards] ${feature.delay} h-full`}
                 >
-                  <CardHeader>
-                    <feature.icon className="w-10 h-10 text-blue-700 mb-4" />
-                    <CardTitle className="text-xl text-gray-800">
-                      {feature.title}
-                    </CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-gray-600">{feature.description}</p>
-                  </CardContent>
-                </Card>
+                  <div
+                    className="group h-full bg-white/70 backdrop-blur-lg rounded-2xl p-8 
+                    hover:bg-white transition-all duration-500 border border-gray-100 
+                    shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_40px_rgba(0,0,0,0.07)]
+                    relative overflow-hidden"
+                  >
+                    {/* Hover gradient effect */}
+                    <div
+                      className="absolute inset-0 bg-gradient-to-br from-blue-50 to-purple-50 opacity-0 
+                      group-hover:opacity-100 transition-opacity duration-500"
+                    />
+
+                    {/* Content wrapper */}
+                    <div className="relative">
+                      {/* Icon */}
+                      <div
+                        className="inline-flex p-3 rounded-xl bg-blue-600/10 text-blue-600 mb-5
+                        group-hover:scale-110 group-hover:rotate-6 transition-all duration-300"
+                      >
+                        <feature.icon className="w-6 h-6" />
+                      </div>
+
+                      {/* Title */}
+                      <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors duration-300">
+                        {feature.title}
+                      </h3>
+
+                      {/* Description */}
+                      <p className="text-gray-600 leading-relaxed">
+                        {feature.description}
+                      </p>
+                    </div>
+
+                    {/* Bottom decorative line */}
+                    <div
+                      className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-blue-600 to-purple-600 
+                      transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500"
+                    />
+                  </div>
+                </div>
               ))}
             </div>
           </div>
         </section>
 
-        <section className="py-16 px-4 bg-white" id="process">
+        <section className="py-24 px-4 bg-white" id="process">
           <div className="container mx-auto">
-            <h2 className="text-2xl md:text-3xl font-bold text-center mb-12 text-gray-800">
-              Simple, Swift, Successful Launch
-            </h2>
+            <div className="max-w-3xl mx-auto text-center mb-16 opacity-0 translate-y-6 animate-[fade-in-up_0.6s_ease-out_forwards]">
+              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                Simple, Swift, Successful Launch
+              </h2>
+              <p className="text-lg text-gray-600">
+                Your journey from idea to market in just 14 days
+              </p>
+            </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {[
                 {
@@ -128,11 +176,16 @@ function Page() {
           </div>
         </section>
 
-        <section className="py-16 px-4 bg-white" id="pricing">
+        <section className="py-24 px-4 bg-white" id="pricing">
           <div className="container mx-auto">
-            <h2 className="text-2xl md:text-3xl font-bold text-center mb-12 text-gray-800">
-              Clear, No-Surprise Pricing
-            </h2>
+            <div className="max-w-3xl mx-auto text-center mb-16 opacity-0 translate-y-6 animate-[fade-in-up_0.6s_ease-out_forwards]">
+              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                Clear, No-Surprise Pricing
+              </h2>
+              <p className="text-lg text-gray-600">
+                Transparent pricing packages designed for startup success
+              </p>
+            </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <Card className="border border-blue-100 shadow-lg hover:shadow-xl transition-shadow bg-white">
                 <CardHeader>
@@ -204,13 +257,13 @@ function Page() {
           </div>
         </section>
 
-        <section className="py-20 px-4 bg-gradient-to-br from-blue-50 to-white overflow-hidden">
+        <section className="py-24 px-4 bg-gradient-to-br from-blue-50 to-white overflow-hidden">
           <div className="container mx-auto">
-            <div className="text-center max-w-3xl mx-auto mb-16 opacity-0 translate-y-6 animate-[fade-in-up_0.6s_ease-out_forwards]">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+            <div className="max-w-3xl mx-auto text-center mb-16 opacity-0 translate-y-6 animate-[fade-in-up_0.6s_ease-out_forwards]">
+              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
                 Why Start With an MVP?
               </h2>
-              <p className="text-gray-600 text-lg">
+              <p className="text-lg text-gray-600">
                 Launch faster, learn faster, and succeed faster with a strategic
                 MVP approach
               </p>
@@ -305,8 +358,16 @@ function Page() {
           </div>
         </section>
 
-        <section className="py-16 px-4 bg-gray-100">
+        <section className="py-24 px-4 bg-gray-100">
           <div className="container mx-auto">
+            <div className="max-w-3xl mx-auto text-center mb-16 opacity-0 translate-y-6 animate-[fade-in-up_0.6s_ease-out_forwards]">
+              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                Meet Your Developer
+              </h2>
+              <p className="text-lg text-gray-600">
+                Senior full-stack expertise with a passion for startup success
+              </p>
+            </div>
             <div className="flex flex-col md:flex-row items-center gap-8">
               <Image
                 src="https://avatars.githubusercontent.com/u/3471265?v=4"
