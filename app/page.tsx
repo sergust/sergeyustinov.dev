@@ -144,32 +144,121 @@ function Page() {
                 Your journey from idea to market in just 14 days
               </p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
+              {/* Timeline connector */}
+              <div className="hidden md:block absolute top-1/2 left-0 right-0 h-0.5 bg-gradient-to-r from-blue-600 via-purple-600 to-blue-600 transform -translate-y-1/2" />
+
               {[
                 {
-                  title: "Day 1: Strategy",
+                  phase: "Phase 1",
+                  title: "Strategy & Planning",
+                  duration: "Day 1",
                   description:
                     "We'll map out your MVP's core features and create a focused development plan that targets your market needs.",
+                  features: [
+                    "Market analysis",
+                    "Feature prioritization",
+                    "Technical planning",
+                    "Development roadmap",
+                  ],
+                  icon: Target,
+                  delay: "delay-[0ms]",
                 },
                 {
-                  title: "Days 2-13: Build",
+                  phase: "Phase 2",
+                  title: "Development Sprint",
+                  duration: "Days 2-13",
                   description:
                     "Daily progress updates as your product takes shape, with continuous feedback and adjustments.",
+                  features: [
+                    "Rapid development",
+                    "Daily updates",
+                    "Progress tracking",
+                    "Feedback integration",
+                  ],
+                  icon: Code,
+                  delay: "delay-[200ms]",
                 },
                 {
-                  title: "Day 14: Launch",
+                  phase: "Phase 3",
+                  title: "Launch & Handover",
+                  duration: "Day 14",
                   description:
                     "Full deployment, technical training, and handover of your market-ready product.",
+                  features: [
+                    "Final testing",
+                    "Deployment",
+                    "Documentation",
+                    "Training session",
+                  ],
+                  icon: Rocket,
+                  delay: "delay-[400ms]",
                 },
               ].map((step, index) => (
-                <div key={index} className="text-center">
-                  <div className="w-16 h-16 bg-blue-700 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
-                    {index + 1}
+                <div
+                  key={index}
+                  className={`opacity-0 translate-y-8 animate-[fade-in-up_0.5s_ease-out_forwards] ${step.delay} h-full`}
+                >
+                  <div className="relative group h-full">
+                    {/* Number indicator */}
+                    <div
+                      className="absolute -top-3 left-1/2 -translate-x-1/2 w-12 h-12 bg-white rounded-full border-2 border-blue-600 
+                      flex items-center justify-center text-blue-600 font-bold text-lg z-10 group-hover:bg-blue-600 
+                      group-hover:text-white transition-all duration-300"
+                    >
+                      {index + 1}
+                    </div>
+
+                    <div className="pt-8 h-full">
+                      <div
+                        className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300 
+                        border border-gray-100 h-full flex flex-col relative overflow-hidden group"
+                      >
+                        {/* Decorative gradient background */}
+                        <div
+                          className="absolute inset-0 bg-gradient-to-br from-blue-50 to-indigo-50 opacity-0 
+                          group-hover:opacity-100 transition-opacity duration-500"
+                        />
+
+                        {/* Content wrapper */}
+                        <div className="relative flex flex-col h-full">
+                          {/* Phase label */}
+                          <div className="inline-block px-3 py-1 rounded-full bg-blue-100 text-blue-600 text-sm font-semibold mb-2 w-fit">
+                            {step.phase}
+                          </div>
+
+                          {/* Duration */}
+                          <div className="text-purple-600 font-semibold mb-3">
+                            {step.duration}
+                          </div>
+
+                          {/* Title */}
+                          <h3 className="text-xl font-bold text-gray-900 mb-3">
+                            {step.title}
+                          </h3>
+
+                          {/* Description */}
+                          <p className="text-gray-600 mb-6">
+                            {step.description}
+                          </p>
+
+                          {/* Features list - pushed to bottom with margin-top auto */}
+                          <ul className="space-y-2 mt-auto">
+                            {step.features.map((feature, i) => (
+                              <li
+                                key={i}
+                                className="flex items-center text-gray-700"
+                              >
+                                <CheckCircle className="w-5 h-5 text-green-500 mr-2 flex-shrink-0" />
+                                <span className="text-sm">{feature}</span>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                  <h3 className="text-xl font-semibold mb-2 text-gray-800">
-                    {step.title}
-                  </h3>
-                  <p className="text-gray-600">{step.description}</p>
                 </div>
               ))}
             </div>
