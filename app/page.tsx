@@ -11,68 +11,10 @@ import {
   Code,
 } from "lucide-react";
 import Image from "next/image";
-import MobileMenu from "@/components/mobile-menu";
-import AnimatedHero from "@/components/main/animated-hero";
+import AnimatedHero from "@/components/redesign/animated-hero";
 import Link from "next/link";
-
-const Logo: React.FC = () => {
-  return (
-    <div className="flex items-baseline">
-      <span className="text-xl font-bold bg-gradient-to-r from-blue-700 to-blue-900 bg-clip-text text-transparent">
-        Sergey<span className="text-blue-700">Ustinov</span>
-      </span>
-      <span className="text-sm font-medium text-blue-600 ml-0.5 opacity-70">
-        .dev
-      </span>
-      <span className="relative ml-1 group-hover:animate-bounce">
-        <span className="absolute -top-0.5 w-1.5 h-1.5 bg-blue-500 rounded-full opacity-0 group-hover:opacity-100 transition-opacity" />
-      </span>
-    </div>
-  );
-};
-
-const HeaderComponent: React.FC = () => {
-  return (
-    <header className="w-full py-4 px-6 flex justify-between items-center bg-slate-50 shadow-sm sticky top-0 z-10">
-      <a href="#" className="flex items-center group">
-        <Logo />
-      </a>
-
-      <nav className="hidden md:flex items-center space-x-6">
-        <a
-          href="#our-work"
-          className="text-gray-700 hover:text-indigo-600 transition-colors"
-        >
-          Portfolio
-        </a>
-        <a
-          href="#process"
-          className="text-gray-700 hover:text-indigo-600 transition-colors"
-        >
-          How I Work
-        </a>
-        <a
-          href="#pricing"
-          className="text-gray-700 hover:text-indigo-600 transition-colors"
-        >
-          Packages
-        </a>
-        <Link
-          href="https://cal.com/sergustinov/15-minutes-chat"
-          target="_blank"
-        >
-          <Button
-            variant="outline"
-            className="border-indigo-600 text-indigo-600 hover:bg-indigo-600 bg-white"
-          >
-            Book a Call 📞
-          </Button>
-        </Link>
-      </nav>
-      <MobileMenu />
-    </header>
-  );
-};
+import { Logo } from "@/components/redesign/logo";
+import { HeaderComponent } from "@/components/redesign/header-component";
 
 function Page() {
   return (

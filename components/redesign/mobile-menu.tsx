@@ -9,8 +9,8 @@ export default function MobileMenu() {
   const [isOpen, setIsOpen] = useState(false);
 
   const menuItems = [
-    { href: "#our-work", label: "Portfolio" },
-    { href: "#process", label: "How I Work" },
+    { href: "/portfolio", label: "Portfolio" },
+    // { href: "#process", label: "How I Work" },
     { href: "#pricing", label: "Packages" },
   ];
 
