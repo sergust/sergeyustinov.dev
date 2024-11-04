@@ -1,9 +1,17 @@
 import React from "react";
-import { ExternalLink, Github, ArrowRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import Footer from "@/components/redesign/footer";
 import { HeaderComponent } from "@/components/redesign/header-component";
+import { getSEOTags } from "@/libs/seo";
+
+export const metadata = getSEOTags({
+  title: "Portfolio | Sergey Ustinov - Full Stack Developer",
+  description:
+    "Explore my portfolio of successful projects including work with Motorola Solutions, Jibble, and other innovative startups.",
+  canonicalUrlRelative: "/portfolio",
+});
 
 interface Project {
   title: string;

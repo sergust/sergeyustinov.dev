@@ -3,10 +3,11 @@ import { ConfigProps } from "./types/config";
 
 const config = {
   // REQUIRED
-  appName: "Sergey Ustinov Dev | A Front End Developer for Startups",
+  appName: "Sergey Ustinov | Full Stack Developer for Startups",
   // REQUIRED: a short description of your app for SEO tags (can be overwritten)
   appDescription:
-    "I help startups build their products and bring them to market on a one-time or retainer basis.",
+    "Senior Full Stack Developer specializing in MVP development and startup solutions. 5+ years of experience building scalable applications with React, Next.js, and TypeScript.",
+
   // REQUIRED (no https://, not trialing slash at the end, just the naked domain)
   domainName: "sergeyustinov.dev",
   crisp: {

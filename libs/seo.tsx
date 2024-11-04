@@ -22,8 +22,17 @@ export const getSEOTags = ({
     title: title || config.appName,
     // up to 160 characters (how does your app help the user?)
     description: description || config.appDescription,
-    // some keywords separated by commas. by default it will be your app name
-    keywords: keywords || [config.appName],
+    keywords: keywords || [
+      "Full Stack Developer",
+      "React Developer",
+      "Next.js Developer",
+      "Startup Development",
+      "MVP Development",
+      "Web Development",
+      "TypeScript",
+      "Frontend Development",
+      config.appName,
+    ],
     applicationName: config.appName,
     // set a base URL prefix for other fields that require a fully qualified URL (.e.g og:image: og:image: 'https://yourdomain.com/share.png' => '/share.png')
     metadataBase: new URL(
@@ -57,7 +66,20 @@ export const getSEOTags = ({
       card: "summary_large_image",
       creator: "@marc_louvion",
     },
-
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        "max-video-preview": -1,
+        "max-image-preview": "large",
+        "max-snippet": -1,
+      },
+    },
+    // verification: {
+    //   google: "your-google-verification-code", // Add your Google Search Console verification code
+    // },
     // If a canonical URL is given, we add it. The metadataBase will turn the relative URL into a fully qualified URL
     ...(canonicalUrlRelative && {
       alternates: { canonical: canonicalUrlRelative },
@@ -82,17 +104,17 @@ export const renderSchemaTags = () => {
       dangerouslySetInnerHTML={{
         __html: JSON.stringify({
           "@context": "http://schema.org",
-          "@type": "SoftwareApplication",
+          "@type": "ProfessionalService",
           name: config.appName,
           description: config.appDescription,
           image: `https://${config.domainName}/icon.png`,
           url: `https://${config.domainName}/`,
           author: {
             "@type": "Person",
-            name: "Marc Lou",
+            name: "Sergei Ustinov",
           },
           datePublished: "2023-08-01",
-          applicationCategory: "EducationalApplication",
+          // applicationCategory: "EducationalApplication",
           aggregateRating: {
             "@type": "AggregateRating",
             ratingValue: "4.8",
@@ -101,7 +123,7 @@ export const renderSchemaTags = () => {
           offers: [
             {
               "@type": "Offer",
-              price: "9.00",
+              price: "3990.00",
               priceCurrency: "USD",
             },
           ],
