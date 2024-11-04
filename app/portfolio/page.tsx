@@ -62,8 +62,8 @@ function PortfolioPage() {
               Proven Results, Not Just Promises
             </h1>
             <p className="text-xl text-gray-600 text-center mb-12 max-w-3xl mx-auto">
-              Every project below was delivered in 14 days or less, generating
-              real business impact for founders.
+              Showcasing impactful projects where I&apos;ve delivered
+              significant value as a senior engineer.
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
