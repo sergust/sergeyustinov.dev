@@ -10,8 +10,8 @@ export default function MobileMenu() {
 
   const menuItems = [
     { href: "/portfolio", label: "Portfolio" },
-    // { href: "#process", label: "How I Work" },
-    { href: "#pricing", label: "Packages" },
+    { href: "/#process", label: "How I Work" },
+    { href: "/#pricing", label: "Packages" },
   ];
 
   return (
@@ -67,6 +67,8 @@ export default function MobileMenu() {
             <Link
               href="https://cal.com/sergustinov/15-minutes-chat"
               target="_blank"
+              rel="noopener noreferrer"
+              referrerPolicy="no-referrer"
             >
               <Button
                 variant="outline"

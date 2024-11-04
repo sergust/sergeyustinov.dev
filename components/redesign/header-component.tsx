@@ -33,6 +33,8 @@ export const HeaderComponent: React.FC = () => {
         <Link
           href="https://cal.com/sergustinov/15-minutes-chat"
           target="_blank"
+          rel="noopener noreferrer"
+          referrerPolicy="no-referrer"
         >
           <Button
             variant="outline"

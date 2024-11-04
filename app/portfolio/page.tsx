@@ -188,8 +188,10 @@ function PortfolioPage() {
                           <Link
                             href={project.link}
                             target="_blank"
+                            rel="noopener noreferrer"
+                            referrerPolicy="no-referrer"
                             className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-700 
-                              font-semibold group/link mt-auto"
+    font-semibold group/link mt-auto"
                           >
                             View Project
                             <ArrowRight className="w-4 h-4 transform group-hover/link:translate-x-1 transition-transform" />

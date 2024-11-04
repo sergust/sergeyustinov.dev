@@ -379,6 +379,8 @@ function Page() {
                       <Link
                         href="https://cal.com/sergustinov/15-minutes-chat"
                         target="_blank"
+                        rel="noopener noreferrer"
+                        referrerPolicy="no-referrer"
                         className={`block text-center py-3 px-6 rounded-xl font-semibold transition-all duration-300
                           ${
                             plan.popular
@@ -510,6 +512,8 @@ function Page() {
               <Link
                 href="https://cal.com/sergustinov/15-minutes-chat"
                 target="_blank"
+                rel="noopener noreferrer"
+                referrerPolicy="no-referrer"
                 className="inline-flex items-center gap-2 bg-blue-600 text-white px-6 py-3 rounded-full font-semibold
                   transition-all duration-300 hover:bg-blue-700 hover:shadow-lg hover:-translate-y-0.5
                   active:translate-y-0 active:shadow-md"
@@ -574,6 +578,8 @@ function Page() {
                       <Link
                         href="https://github.com/sergust"
                         target="_blank"
+                        rel="noopener noreferrer"
+                        referrerPolicy="no-referrer"
                         className="text-gray-600 hover:text-blue-600 transition-colors"
                       >
                         <Github className="w-6 h-6" />
@@ -652,6 +658,8 @@ function Page() {
                     <Link
                       href="https://cal.com/sergustinov/15-minutes-chat"
                       target="_blank"
+                      rel="noopener noreferrer"
+                      referrerPolicy="no-referrer"
                       className="inline-flex items-center gap-2 bg-blue-600 text-white px-6 py-3 rounded-full 
                         font-semibold hover:bg-blue-700 transition-all duration-300 hover:shadow-lg 
                         hover:shadow-blue-600/20 hover:-translate-y-0.5"
@@ -674,6 +682,8 @@ function Page() {
             <Link
               href="https://cal.com/sergustinov/15-minutes-chat"
               target="_blank"
+              rel="noopener noreferrer"
+              referrerPolicy="no-referrer"
             >
               <Button
                 size="lg"
