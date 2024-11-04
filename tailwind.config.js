@@ -80,6 +80,16 @@ module.exports = {
             backgroundPosition: "0% 50%",
           },
         },
+        "fade-in-up": {
+          "0%": {
+            opacity: "0",
+            transform: "translateY(2rem)",
+          },
+          "100%": {
+            opacity: "1",
+            transform: "translateY(0)",
+          },
+        },
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -131,11 +141,15 @@ module.exports = {
     },
   },
   plugins: [require("tailwindcss-animate")],
-  daisyui: {
-    // Light & dark themes are added by default (it switches automatically based on OS settings)
-    // You can add another theme among the list of 30+
-    // Add "data-theme='theme_name" to any HTML tag to enable the 'theme_name' theme.
-    // https://daisyui.com/
-    themes: ["light", "dark"],
-  },
+  safelist: [
+    "bg-blue-100",
+    "text-blue-600",
+    "bg-green-100",
+    "text-green-600",
+    "bg-purple-100",
+    "text-purple-600",
+    "delay-[0ms]",
+    "delay-[200ms]",
+    "delay-[400ms]",
+  ],
 };

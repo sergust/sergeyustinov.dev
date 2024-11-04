@@ -9,6 +9,10 @@ import {
   Search,
   FileText,
   Code,
+  GitBranch,
+  Target,
+  TrendingUp,
+  Zap,
 } from "lucide-react";
 import Image from "next/image";
 import AnimatedHero from "@/components/redesign/animated-hero";
@@ -60,6 +64,12 @@ function Page() {
                   title: "Launch-Ready Package",
                   description:
                     "SEO optimization, analytics, and performance tuning included. Ready to attract customers from day one.",
+                },
+                {
+                  icon: GitBranch,
+                  title: "Clean, Maintainable Code",
+                  description:
+                    "Enterprise-grade code quality with comprehensive documentation. Easy handover to your future tech team.",
                 },
               ].map((feature, index) => (
                 <Card
@@ -194,22 +204,103 @@ function Page() {
           </div>
         </section>
 
-        <section className="py-16 px-4 bg-white">
+        <section className="py-20 px-4 bg-gradient-to-br from-blue-50 to-white overflow-hidden">
           <div className="container mx-auto">
-            <h2 className="text-2xl md:text-3xl font-bold text-center mb-12 text-gray-800">
-              Why Start With an MVP?
-            </h2>
+            <div className="text-center max-w-3xl mx-auto mb-16 opacity-0 translate-y-6 animate-[fade-in-up_0.6s_ease-out_forwards]">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+                Why Start With an MVP?
+              </h2>
+              <p className="text-gray-600 text-lg">
+                Launch faster, learn faster, and succeed faster with a strategic
+                MVP approach
+              </p>
+            </div>
+
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {[
-                "Test your market with minimal investment",
-                "Start generating revenue while others are still planning",
-                "Adapt quickly based on real user feedback",
-              ].map((point, index) => (
-                <div key={index} className="flex items-start">
-                  <Rocket className="w-6 h-6 text-blue-700 mr-4 flex-shrink-0" />
-                  <p className="text-gray-600">{point}</p>
+                {
+                  icon: Target,
+                  title: "Validate Your Market",
+                  description:
+                    "Test your business hypothesis with minimal investment. Get real market validation before committing significant resources.",
+                  stats: "Save up to 60% on initial development costs",
+                  color: "blue",
+                  delay: "delay-[0ms]",
+                },
+                {
+                  icon: TrendingUp,
+                  title: "Generate Early Revenue",
+                  description:
+                    "Start monetizing while your competition is still in the planning phase. Begin building your customer base immediately.",
+                  stats: "Launch in 14 days vs. 3-6 months",
+                  color: "green",
+                  delay: "delay-[200ms]",
+                },
+                {
+                  icon: Zap,
+                  title: "Rapid Iteration",
+                  description:
+                    "Gather real user feedback and adapt quickly. Let your customers guide your product evolution.",
+                  stats: "Implement changes 5x faster",
+                  color: "purple",
+                  delay: "delay-[400ms]",
+                },
+              ].map((benefit, index) => (
+                <div
+                  key={index}
+                  className={`opacity-0 translate-y-8 animate-[fade-in-up_0.5s_ease-out_forwards] ${benefit.delay} h-full`}
+                >
+                  <div
+                    className="relative group bg-white rounded-xl p-6 shadow-lg transition-all duration-300 border border-gray-100 
+                    hover:shadow-xl hover:-translate-y-1 h-full flex flex-col"
+                  >
+                    {/* Decorative background element */}
+                    <div
+                      className={`absolute top-0 right-0 w-24 h-24 bg-${benefit.color}-100 rounded-bl-full opacity-20 
+                      transition-opacity duration-300 group-hover:opacity-40`}
+                    />
+
+                    {/* Icon */}
+                    <div
+                      className={`relative inline-flex p-3 rounded-lg bg-${benefit.color}-100 text-${benefit.color}-600 mb-4 
+                      transform transition-transform duration-300 group-hover:scale-110 w-fit`}
+                    >
+                      <benefit.icon className="w-6 h-6" />
+                    </div>
+
+                    {/* Content */}
+                    <h3 className="text-xl font-bold text-gray-800 mb-2">
+                      {benefit.title}
+                    </h3>
+                    <p className="text-gray-600 mb-4 leading-relaxed flex-grow">
+                      {benefit.description}
+                    </p>
+
+                    {/* Stats */}
+                    <div
+                      className={`flex items-center text-${benefit.color}-600 font-semibold text-sm 
+                      opacity-0 -translate-y-2 transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-0 mt-auto`}
+                    >
+                      <TrendingUp className="w-4 h-4 mr-2" />
+                      {benefit.stats}
+                    </div>
+                  </div>
                 </div>
               ))}
+            </div>
+
+            {/* Call to action */}
+            <div className="text-center mt-12 opacity-0 translate-y-6 animate-[fade-in-up_0.6s_ease-out_0.6s_forwards]">
+              <Link
+                href="https://cal.com/sergustinov/15-minutes-chat"
+                target="_blank"
+                className="inline-flex items-center gap-2 bg-blue-600 text-white px-6 py-3 rounded-full font-semibold
+                  transition-all duration-300 hover:bg-blue-700 hover:shadow-lg hover:-translate-y-0.5
+                  active:translate-y-0 active:shadow-md"
+              >
+                <Rocket className="w-5 h-5" />
+                Start Your MVP Journey
+              </Link>
             </div>
           </div>
         </section>
