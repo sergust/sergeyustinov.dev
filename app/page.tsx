@@ -22,8 +22,11 @@ import AnimatedHero from "@/components/redesign/animated-hero";
 import Link from "next/link";
 import { Logo } from "@/components/redesign/logo";
 import { HeaderComponent } from "@/components/redesign/header-component";
+import { useAnalytics } from "@/libs/analytics";
 
 function Page() {
+  const { trackCallClick } = useAnalytics();
+
   return (
     <div className="flex flex-col min-h-screen bg-white">
       <HeaderComponent />
@@ -381,6 +384,7 @@ function Page() {
                         target="_blank"
                         rel="noopener noreferrer"
                         referrerPolicy="no-referrer"
+                        onClick={trackCallClick}
                         className={`block text-center py-3 px-6 rounded-xl font-semibold transition-all duration-300
                           ${
                             plan.popular
@@ -514,6 +518,7 @@ function Page() {
                 target="_blank"
                 rel="noopener noreferrer"
                 referrerPolicy="no-referrer"
+                onClick={trackCallClick}
                 className="inline-flex items-center gap-2 bg-blue-600 text-white px-6 py-3 rounded-full font-semibold
                   transition-all duration-300 hover:bg-blue-700 hover:shadow-lg hover:-translate-y-0.5
                   active:translate-y-0 active:shadow-md"
@@ -660,6 +665,7 @@ function Page() {
                       target="_blank"
                       rel="noopener noreferrer"
                       referrerPolicy="no-referrer"
+                      onClick={trackCallClick}
                       className="inline-flex items-center gap-2 bg-blue-600 text-white px-6 py-3 rounded-full 
                         font-semibold hover:bg-blue-700 transition-all duration-300 hover:shadow-lg 
                         hover:shadow-blue-600/20 hover:-translate-y-0.5"
@@ -684,6 +690,7 @@ function Page() {
               target="_blank"
               rel="noopener noreferrer"
               referrerPolicy="no-referrer"
+              onClick={trackCallClick}
             >
               <Button
                 size="lg"

@@ -7,7 +7,10 @@
     "build": "next build",
     "postbuild": "next-sitemap",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "security-audit": "npm audit",
+    "dependencies-update": "npm update",
+    "preinstall": "npx npm-force-resolutions"
   },
   "dependencies": {
     "@auth/mongodb-adapter": "^1.0.0",

@@ -4,6 +4,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Code, Box, Circle, Triangle } from "lucide-react";
 import Link from "next/link";
+import { useAnalytics } from "@/libs/analytics";
 
 interface Particle {
   x: number;
@@ -200,6 +201,7 @@ const ParticleSystem: React.FC = () => {
 
 const AnimatedHero: React.FC = () => {
   const [isHovered, setIsHovered] = useState(false);
+  const { trackCallClick } = useAnalytics();
 
   return (
     <div className="z-0 relative overflow-hidden bg-gradient-to-r from-blue-900 via-blue-800 to-blue-900 text-white min-h-[600px] py-20 px-4">
@@ -301,6 +303,7 @@ const AnimatedHero: React.FC = () => {
           <Link
             href="https://cal.com/sergustinov/15-minutes-chat"
             target="_blank"
+            onClick={trackCallClick}
           >
             <Button
               size="lg"

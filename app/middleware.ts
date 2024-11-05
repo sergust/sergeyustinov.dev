@@ -22,11 +22,20 @@ export function middleware(request: NextRequest) {
     "default-src 'self'; " +
       "script-src 'self' 'unsafe-eval' 'unsafe-inline' *.cal.com; " +
       "style-src 'self' 'unsafe-inline'; " +
-      "img-src 'self' data: blob: *.githubusercontent.com; " +
+      "img-src 'self' data: blob: *.githubusercontent.com *.cal.com; " +
       "font-src 'self'; " +
       "connect-src 'self' *.cal.com; " +
-      "frame-src 'self' *.cal.com;"
+      "frame-src 'self' *.cal.com; " +
+      "base-uri 'self'; " +
+      "form-action 'self'; " +
+      "frame-ancestors 'none'; " +
+      "object-src 'none'; " +
+      "upgrade-insecure-requests;"
   );
+  response.headers.set("X-XSS-Protection", "1; mode=block");
+  response.headers.set("Cross-Origin-Opener-Policy", "same-origin");
+  response.headers.set("Cross-Origin-Embedder-Policy", "require-corp");
+  response.headers.set("Cross-Origin-Resource-Policy", "same-origin");
 
   return response;
 }
