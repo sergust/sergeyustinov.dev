@@ -4,7 +4,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Code, Box, Circle, Triangle } from "lucide-react";
 import Link from "next/link";
-import { useAnalytics } from "@/libs/analytics";
+import { useAnalytics } from "@/lib/analytics";
 
 interface Particle {
   x: number;
