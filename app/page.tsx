@@ -22,7 +22,7 @@ import AnimatedHero from "@/components/redesign/animated-hero";
 import Link from "next/link";
 import { Logo } from "@/components/redesign/logo";
 import { HeaderComponent } from "@/components/redesign/header-component";
-import { useAnalytics } from "@/libs/analytics";
+import { useAnalytics } from "@/lib/analytics";
 
 function Page() {
   const { trackCallClick } = useAnalytics();
