@@ -5,6 +5,7 @@ import Image from "next/image";
 import Footer from "@/components/redesign/footer";
 import { HeaderComponent } from "@/components/redesign/header-component";
 import { getSEOTags } from "@/libs/seo";
+import CallToActionLink from "@/components/redesign/call-to-action-link";
 
 export const metadata = getSEOTags({
   title: "Portfolio | Sergey Ustinov - Full Stack Developer",
@@ -222,15 +223,13 @@ function PortfolioPage() {
                 Let&apos;s discuss how we can achieve similar results for your
                 project
               </p>
-              <Link
-                href="https://cal.com/sergustinov/15-minutes-chat"
-                target="_blank"
+              <CallToActionLink
                 className="inline-flex items-center gap-2 bg-white text-blue-600 px-8 py-4 
                   rounded-full font-semibold hover:bg-blue-50 transition-all duration-300
                   hover:shadow-lg hover:shadow-white/20 hover:-translate-y-0.5"
               >
                 Book Your Free Strategy Call
-              </Link>
+              </CallToActionLink>
             </div>
           </div>
         </section>

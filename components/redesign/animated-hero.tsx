@@ -3,8 +3,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Code, Box, Circle, Triangle } from "lucide-react";
-import Link from "next/link";
-import { useAnalytics } from "@/lib/analytics";
+import CallToActionLink from "@/components/redesign/call-to-action-link";
 
 interface Particle {
   x: number;
@@ -201,7 +200,6 @@ const ParticleSystem: React.FC = () => {
 
 const AnimatedHero: React.FC = () => {
   const [isHovered, setIsHovered] = useState(false);
-  const { trackCallClick } = useAnalytics();
 
   return (
     <div className="z-0 relative overflow-hidden bg-gradient-to-r from-blue-900 via-blue-800 to-blue-900 text-white min-h-[600px] py-20 px-4">
@@ -300,11 +298,7 @@ const AnimatedHero: React.FC = () => {
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
         >
-          <Link
-            href="https://cal.com/sergustinov/15-minutes-chat"
-            target="_blank"
-            onClick={trackCallClick}
-          >
+          <CallToActionLink>
             <Button
               size="lg"
               className={`
@@ -315,7 +309,7 @@ const AnimatedHero: React.FC = () => {
             >
               Schedule Your Free Strategy Call
             </Button>
-          </Link>
+          </CallToActionLink>
           <div
             className={`
             absolute inset-0 bg-blue-300 filter blur-xl opacity-50 

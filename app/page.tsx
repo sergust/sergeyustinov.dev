@@ -22,11 +22,9 @@ import AnimatedHero from "@/components/redesign/animated-hero";
 import Link from "next/link";
 import { Logo } from "@/components/redesign/logo";
 import { HeaderComponent } from "@/components/redesign/header-component";
-import { useAnalytics } from "@/lib/analytics";
+import CallToActionLink from "@/components/redesign/call-to-action-link";
 
 function Page() {
-  const { trackCallClick } = useAnalytics();
-
   return (
     <div className="flex flex-col min-h-screen bg-white">
       <HeaderComponent />
@@ -379,12 +377,7 @@ function Page() {
 
                     {/* CTA Button - now part of a footer section */}
                     <div className="mt-8 pt-6 border-t border-gray-100">
-                      <Link
-                        href="https://cal.com/sergustinov/15-minutes-chat"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        referrerPolicy="no-referrer"
-                        onClick={trackCallClick}
+                      <CallToActionLink
                         className={`block text-center py-3 px-6 rounded-xl font-semibold transition-all duration-300
                           ${
                             plan.popular
@@ -393,7 +386,7 @@ function Page() {
                           }`}
                       >
                         Book Discovery Call
-                      </Link>
+                      </CallToActionLink>
                     </div>
 
                     {/* Bottom gradient line */}
@@ -513,19 +506,14 @@ function Page() {
 
             {/* Call to action */}
             <div className="text-center mt-12 opacity-0 translate-y-6 animate-[fade-in-up_0.6s_ease-out_0.6s_forwards]">
-              <Link
-                href="https://cal.com/sergustinov/15-minutes-chat"
-                target="_blank"
-                rel="noopener noreferrer"
-                referrerPolicy="no-referrer"
-                onClick={trackCallClick}
+              <CallToActionLink
                 className="inline-flex items-center gap-2 bg-blue-600 text-white px-6 py-3 rounded-full font-semibold
                   transition-all duration-300 hover:bg-blue-700 hover:shadow-lg hover:-translate-y-0.5
                   active:translate-y-0 active:shadow-md"
               >
                 <Rocket className="w-5 h-5" />
                 Start Your MVP Journey
-              </Link>
+              </CallToActionLink>
             </div>
           </div>
         </section>
@@ -660,19 +648,14 @@ function Page() {
 
                   {/* CTA Button */}
                   <div className="mt-8 text-center lg:text-left">
-                    <Link
-                      href="https://cal.com/sergustinov/15-minutes-chat"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      referrerPolicy="no-referrer"
-                      onClick={trackCallClick}
+                    <CallToActionLink
                       className="inline-flex items-center gap-2 bg-blue-600 text-white px-6 py-3 rounded-full 
                         font-semibold hover:bg-blue-700 transition-all duration-300 hover:shadow-lg 
                         hover:shadow-blue-600/20 hover:-translate-y-0.5"
                     >
                       <Calendar className="w-5 h-5" />
                       Schedule a Call
-                    </Link>
+                    </CallToActionLink>
                   </div>
                 </div>
               </div>
@@ -685,13 +668,7 @@ function Page() {
             <h2 className="text-2xl md:text-3xl font-bold mb-8">
               Ready to Launch Your Startup?
             </h2>
-            <Link
-              href="https://cal.com/sergustinov/15-minutes-chat"
-              target="_blank"
-              rel="noopener noreferrer"
-              referrerPolicy="no-referrer"
-              onClick={trackCallClick}
-            >
+            <CallToActionLink>
               <Button
                 size="lg"
                 variant="outline"
@@ -699,7 +676,7 @@ function Page() {
               >
                 Book Your Free Strategy Call
               </Button>
-            </Link>
+            </CallToActionLink>
             <p className="mt-4 text-sm max-w-2xl mx-auto">
               Let&apos;s discuss your idea and see if we&apos;re a good fit. I
               only take on projects where I&apos;m confident I can deliver
