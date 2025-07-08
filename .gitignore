@@ -3,7 +3,12 @@
 # dependencies
 /node_modules
 /.pnp
-.pnp.js
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
 
 # testing
 /coverage
@@ -23,9 +28,10 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+.pnpm-debug.log*
 
-# local env files
-.env*.local
+# env files (can opt-in for committing if needed)
+.env*
 
 # vercel
 .vercel
@@ -34,7 +40,21 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-# public
-public/robots.txt
-public/sitemap.xml
-public/sitemap-0.xml
+# prisma
+prisma/dev.db
+prisma/migrations/migration_lock.toml
+
+# uploadthing
+.uploadthing/
+
+# local development
+.turbo/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+Thumbs.db
