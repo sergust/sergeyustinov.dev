@@ -56,12 +56,12 @@ API Routes (tRPC):
 2. [x] ~~Install core dependencies: tRPC, Clerk, Prisma, Supabase, UploadThing, shadcn/ui for rapid UI development.~~
 3. [x] ~~Configure `.env.local` with placeholder keys for Clerk, Supabase, UploadThing to enable early testing.~~
 4. [x] ~~Setup Prettier with Tailwind plugin ensuring consistent code formatting across the project.~~
-5. Initialize git repository with `.gitignore` covering env files, node_modules, build artifacts.
-6. Configure TypeScript `tsconfig.json` with strict mode, path aliases (@/\*) for cleaner imports.
+5. [x] ~~Initialize git repository with `.gitignore` covering env files, node_modules, build artifacts.~~
+6. [x] ~~Configure TypeScript `tsconfig.json` with strict mode, path aliases (@/\*) for cleaner imports.~~
 
 ### Phase 2: Styling (Liquid-Glass Design System)
 
-7. Create Tailwind config extending with glass-morphism utilities using backdrop-blur, bg-opacity.
+7. [x] ~~Create Tailwind config extending with glass-morphism utilities using backdrop-blur, bg-opacity.~~
 
 ```css
 /* tailwind.config.js extension */
@@ -72,11 +72,11 @@ glass: {
 }
 ```
 
-8. Design color palette with CSS variables supporting light/dark modes for accessibility.
-9. Create `Glass` component wrapper applying blur effects, soft shadows, rounded corners consistently.
-10. Build `GlassCard` variant for post previews with hover state lifting effect.
-11. Implement responsive breakpoints ensuring mobile-first design across all viewports.
-12. Add Geist or Inter font via next/font for optimal performance and readability.
+8. [x] ~~Design color palette with CSS variables supporting light/dark modes for accessibility.~~
+9. [x] ~~Create `Glass` component wrapper applying blur effects, soft shadows, rounded corners consistently.~~
+10. [x] ~~Build `GlassCard` variant for post previews with hover state lifting effect.~~
+11. [x] ~~Implement responsive breakpoints ensuring mobile-first design across all viewports.~~
+12. [x] ~~Add Geist or Inter font via next/font for optimal performance and readability.~~
 
 ### Phase 3: Auth (Clerk Integration)
 
