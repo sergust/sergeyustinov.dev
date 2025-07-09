@@ -58,3 +58,5 @@ prisma/migrations/migration_lock.toml
 
 # OS
 Thumbs.db
+
+/src/generated/prisma

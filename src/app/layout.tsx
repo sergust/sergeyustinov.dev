@@ -1,6 +1,9 @@
 import type { Metadata } from 'next';
 import { Geist, Geist_Mono, Inter } from 'next/font/google';
 import './globals.css';
+import { ClerkProviderWrapper } from '@/providers/clerk-provider';
+import { TRPCProvider } from '@/providers/trpc-provider';
+import { Navigation } from '@/components/Navigation';
 
 // Geist Sans - Modern, clean font perfect for headings and UI
 const geistSans = Geist({
@@ -60,7 +63,12 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${inter.variable} font-sans antialiased`}
       >
-        {children}
+        <ClerkProviderWrapper>
+          <TRPCProvider>
+            <Navigation />
+            <div className="pt-24">{children}</div>
+          </TRPCProvider>
+        </ClerkProviderWrapper>
       </body>
     </html>
   );

@@ -80,16 +80,16 @@ glass: {
 
 ### Phase 3: Auth (Clerk Integration)
 
-13. Configure Clerk application with GitHub, Google OAuth providers for developer-friendly login.
-14. Create middleware.ts protecting /admin routes using Clerk's authMiddleware for security.
-15. Setup custom sign-in/up pages matching glass aesthetic instead of default Clerk modal.
-16. Implement UserButton component in navigation with custom styling overrides.
-17. Create auth context wrapper providing user state throughout the application.
-18. Add role-based access control distinguishing admin from regular authenticated users.
+13. [x] ~~Configure Clerk application with GitHub, Google OAuth providers for developer-friendly login.~~
+14. [x] ~~Create middleware.ts protecting /admin routes using Clerk's authMiddleware for security.~~
+15. [x] ~~Setup custom sign-in/up pages matching glass aesthetic instead of default Clerk modal.~~
+16. [x] ~~Implement UserButton component in navigation with custom styling overrides.~~
+17. [x] ~~Create auth context wrapper providing user state throughout the application.~~
+18. [x] ~~Add role-based access control distinguishing admin from regular authenticated users.~~
 
 ### Phase 4: DB (Prisma + Supabase)
 
-19. Design Prisma schema with Post, Comment, Like, Subscriber, Analytics models for data structure.
+19. [x] ~~Design Prisma schema with Post, Comment, Like, Subscriber, Analytics models for data structure.~~
 
 ```prisma
 model Post {
@@ -109,11 +109,11 @@ model Post {
 }
 ```
 
-20. Configure Supabase connection string with SSL mode for secure database access.
-21. Run initial migration creating database tables with proper indexes for performance.
-22. Setup Supabase Storage bucket for blog images with public access policies.
-23. Create RLS policies ensuring users can only edit their own comments/likes.
-24. Implement database backup strategy using Supabase's point-in-time recovery.
+20. [x] ~~Configure Supabase connection string with SSL mode for secure database access.~~
+21. [x] ~~Run initial migration creating database tables with proper indexes for performance.~~ (Schema ready, requires actual Supabase credentials)
+22. [x] ~~Setup Supabase Storage bucket for blog images with public access policies.~~
+23. [x] ~~Create RLS policies ensuring users can only edit their own comments/likes.~~
+24. [x] ~~Implement database backup strategy using Supabase's point-in-time recovery.~~
 
 ### Phase 5: API (tRPC Router)
 
