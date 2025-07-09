@@ -3,9 +3,10 @@ import { currentUser } from '@clerk/nextjs/server';
 import { db } from './db';
 import { ZodError } from 'zod';
 import superjson from 'superjson';
+import { type NextRequest } from 'next/server';
 
 // Create context for tRPC
-export const createTRPCContext = async () => {
+export const createTRPCContext = async (opts?: { req?: NextRequest }) => {
   const user = await currentUser();
 
   return {
@@ -15,6 +16,7 @@ export const createTRPCContext = async () => {
     isAdmin:
       user?.publicMetadata?.role === 'admin' ||
       user?.emailAddresses?.[0]?.emailAddress === 'sergey@sergeyustinov.dev',
+    req: opts?.req,
   };
 };
 

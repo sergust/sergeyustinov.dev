@@ -117,8 +117,8 @@ model Post {
 
 ### Phase 5: API (tRPC Router)
 
-25. Setup tRPC with Next.js app router creating base router configuration.
-26. Implement post router with publicProcedure for reads, protectedProcedure for writes.
+25. [x] ~~Setup tRPC with Next.js app router creating base router configuration.~~
+26. [x] ~~Implement post router with publicProcedure for reads, protectedProcedure for writes.~~
 
 ```typescript
 // Basic tRPC router structure
@@ -140,11 +140,11 @@ export const postRouter = router({
 });
 ```
 
-27. Create comment router with spam protection using rate limiting middleware.
-28. Build like router ensuring one-like-per-user constraint via compound unique index.
-29. Implement search router using Supabase full-text search with pg_trgm extension.
-30. Add subscriber router with email validation, duplicate prevention logic.
-31. Create analytics router tracking page views without affecting performance.
+27. [x] ~~Create comment router with spam protection using rate limiting middleware.~~
+28. [x] ~~Build like router ensuring one-like-per-user constraint via compound unique index.~~
+29. [x] ~~Implement search router using Supabase full-text search with pg_trgm extension.~~
+30. [x] ~~Add subscriber router with email validation, duplicate prevention logic.~~
+31. [x] ~~Create analytics router tracking page views without affecting performance.~~
 
 ### Phase 6: UI (Component Implementation)
 
